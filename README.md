@@ -38,6 +38,10 @@ O Cineflex é uma aplicação web para reserva de ingressos de cinema. O objetiv
     npm run dev
     ```
 
+## Deploy no Vercel
+
+Segue link da aplicação no Vercel: [Link](https://desafio-cineflex.vercel.app/)
+
 ## Contribuição
 
 Sinta-se à vontade para contribuir com o projeto. Para isso, siga os passos abaixo:
