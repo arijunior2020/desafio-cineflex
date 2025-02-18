@@ -26,7 +26,7 @@ export default function Home() {
                     ))}
                 </ListaFilmes>
             ) : (
-                <p>Nenhum filme disponível no momento.</p>
+                <Paragrafo>Nenhum filme disponível no momento.</Paragrafo>
             )}
         </Container>
     );
@@ -64,4 +64,13 @@ const Filme = styled(Link)`
             transform: scale(1.05);
         }
     }
+`;
+
+const Paragrafo = styled.p`
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    margin-top: 20px;
+    text-align: center;
 `;

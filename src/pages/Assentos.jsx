@@ -84,7 +84,7 @@ export default function Assentos() {
                         />
                     ))
                 ) : (
-                    <p>Carregando assentos...</p>
+                    <Paragrafo>Carregando assentos...</Paragrafo>
                 )}
             </GridAssentos>
 
@@ -186,4 +186,12 @@ const BotaoReservar = styled.button`
     &:hover {
         background-color: #f57272;
     }
+`;
+
+const Paragrafo = styled.p`
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    margin-top: 20px;
 `;

@@ -33,7 +33,7 @@ export default function Sessoes() {
                     </Dia>
                 ))
             ) : (
-                <p>Carregando sessões...</p>
+                <Paragrafo>Carregando sessões...</Paragrafo>
             )}
         </Container>
     );
@@ -109,4 +109,13 @@ const BotaoHorario = styled.button`
 
 const EstilizadoLink = styled(Link)`
     text-decoration: none;
+`;
+
+const Paragrafo = styled.p`
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    margin-top: 20px;
+    text-align: center;
 `;
