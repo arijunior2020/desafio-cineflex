@@ -37,13 +37,23 @@ export default function Assentos() {
             alert("Selecione pelo menos um assento!");
             return;
         }
-
+    
+        if (!nome.trim()) {
+            alert("Por favor, insira seu nome!");
+            return;
+        }
+    
+        if (!cpf.trim()) {
+            alert("Por favor, insira seu CPF!");
+            return;
+        }
+    
         const dadosReserva = {
             ids: assentosSelecionados,
             name: nome,
             cpf: cpf
         };
-
+    
         console.log("📢 Enviando reserva para API:", dadosReserva);
 
         reservarAssentos(dadosReserva)
@@ -55,7 +65,10 @@ export default function Assentos() {
                     state: {
                         nome,
                         cpf,
-                        assentos: assentosSelecionados,
+                        assentos: assentosSelecionados.map(id => {
+                            const assentoEncontrado = sessao.seats.find(assento => assento.id === id);
+                            return assentoEncontrado ? assentoEncontrado.name : id;
+                        }),
                         filme: sessao.movie.title,
                         data: sessao.day.date,
                         horario: sessao.name
